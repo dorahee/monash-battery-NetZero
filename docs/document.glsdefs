@@ -1,0 +1,30 @@
+\ifglsentryexists{n^eod}{}%
+{%
+\gls@defglossaryentry{n^eod}%
+{%
+name={\ensuremath {n^{eod}}},%
+sort={time},%
+type={main},%
+first={\protect \ensuremath  {n^{eod}}},%
+firstplural={\protect \ensuremath  {n^{eod}}s},%
+text={\protect \ensuremath  {n^{eod}}},%
+plural={\protect \ensuremath  {n^{eod}}s},%
+description={the index of the end day time step},%
+descriptionplural={the index of the end day time step},%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={},%
+longplural={},%
+short={},%
+shortplural={},%
+counter={page},%
+parent={},%
+%
+}%
+}%

@@ -1,0 +1,57 @@
+\contentsline {chapter}{\numberline {1}Introduction}{7}{chapter.1}
+\contentsline {section}{\numberline {1.1}Project Goals}{7}{section.1.1}
+\contentsline {section}{\numberline {1.2}Methodology of Battery Scheduling}{7}{section.1.2}
+\contentsline {section}{\numberline {1.3}Report Structure}{8}{section.1.3}
+\contentsline {chapter}{\numberline {2}Peak Demand Management}{9}{chapter.2}
+\contentsline {section}{\numberline {2.1}Summary}{9}{section.2.1}
+\contentsline {section}{\numberline {2.2}Peak Demand Tariff}{9}{section.2.2}
+\contentsline {section}{\numberline {2.3}Methodology of Battery Scheduling for Peak Demand Management}{10}{section.2.3}
+\contentsline {section}{\numberline {2.4}Battery Scheduling Problem for Peak Demand Management}{10}{section.2.4}
+\contentsline {subsection}{\numberline {2.4.1}Problem Parameters}{11}{subsection.2.4.1}
+\contentsline {subsubsection}{Time Interval}{11}{section*.7}
+\contentsline {subsubsection}{Battery Specification}{11}{section*.8}
+\contentsline {subsubsection}{Peak Demand Tariff and Applicable Hour}{12}{section*.9}
+\contentsline {subsubsection}{Demand Forecast}{12}{section*.10}
+\contentsline {subsection}{\numberline {2.4.2}Historic Demand}{13}{subsection.2.4.2}
+\contentsline {subsection}{\numberline {2.4.3}Problem Variables}{13}{subsection.2.4.3}
+\contentsline {subsection}{\numberline {2.4.4}Problem Constraints}{13}{subsection.2.4.4}
+\contentsline {subsection}{\numberline {2.4.5}Problem Objectives}{14}{subsection.2.4.5}
+\contentsline {subsection}{\numberline {2.4.6}Formal Problem Formulation}{15}{subsection.2.4.6}
+\contentsline {section}{\numberline {2.5}Battery Scheduling Method for Peak Demand Management}{16}{section.2.5}
+\contentsline {subsection}{\numberline {2.5.1}Linear Programming Model for Peak Demand Management}{16}{subsection.2.5.1}
+\contentsline {subsection}{\numberline {2.5.2}Rolling Horizon Rescheduling Strategy}{19}{subsection.2.5.2}
+\contentsline {section}{\numberline {2.6}Experimental Results of Battery Scheduling Method for Peak Demand Management}{20}{section.2.6}
+\contentsline {subsection}{\numberline {2.6.1}Experiment Environment}{20}{subsection.2.6.1}
+\contentsline {subsection}{\numberline {2.6.2}Experiment Data}{20}{subsection.2.6.2}
+\contentsline {subsection}{\numberline {2.6.3}Experiment Results}{21}{subsection.2.6.3}
+\contentsline {subsection}{\numberline {2.6.4}Findings}{22}{subsection.2.6.4}
+\contentsline {section}{\numberline {2.7}Conclusion}{24}{section.2.7}
+\contentsline {chapter}{\numberline {3}Demand Response}{30}{chapter.3}
+\contentsline {section}{\numberline {3.1}Summary}{30}{section.3.1}
+\contentsline {section}{\numberline {3.2}Demand Response Financial Rewards}{30}{section.3.2}
+\contentsline {subsection}{\numberline {3.2.1}Calculation of Financial Rewards}{31}{subsection.3.2.1}
+\contentsline {subsection}{\numberline {3.2.2}Calculation of Baseline Loads}{31}{subsection.3.2.2}
+\contentsline {subsubsection}{Like days}{32}{section*.11}
+\contentsline {subsubsection}{Uplift Factor}{32}{section*.12}
+\contentsline {section}{\numberline {3.3}Methodology of Battery Scheduling for Demand Response}{32}{section.3.3}
+\contentsline {section}{\numberline {3.4}Battery Scheduling Problem for Demand Response}{33}{section.3.4}
+\contentsline {subsection}{\numberline {3.4.1}Problem Parameters}{33}{subsection.3.4.1}
+\contentsline {subsubsection}{Time Interval}{33}{section*.13}
+\contentsline {subsubsection}{Battery Specification}{33}{section*.14}
+\contentsline {subsubsection}{Demand Response Reward Parameters}{34}{section*.15}
+\contentsline {subsubsection}{Load Forecast}{34}{section*.16}
+\contentsline {subsubsection}{Historic Load}{35}{section*.17}
+\contentsline {subsubsection}{Price Forecast}{35}{section*.18}
+\contentsline {subsubsection}{Historic Price}{35}{section*.19}
+\contentsline {subsubsection}{Objective Weight}{35}{section*.20}
+\contentsline {subsection}{\numberline {3.4.2}Problem Variables}{35}{subsection.3.4.2}
+\contentsline {subsection}{\numberline {3.4.3}Problem Constraints}{35}{subsection.3.4.3}
+\contentsline {subsection}{\numberline {3.4.4}Problem Objectives}{35}{subsection.3.4.4}
+\contentsline {subsection}{\numberline {3.4.5}Formal Problem Formulation}{36}{subsection.3.4.5}
+\contentsline {section}{\numberline {3.5}Battery Scheduling Method for Demand Response}{36}{section.3.5}
+\contentsline {subsection}{\numberline {3.5.1}Baseline Load Calculation}{36}{subsection.3.5.1}
+\contentsline {subsection}{\numberline {3.5.2}Linear Programming Model for Demand Response}{37}{subsection.3.5.2}
+\contentsline {section}{\numberline {3.6}Experimental Results of Battery Scheduling Method for Demand Response}{39}{section.3.6}
+\contentsline {subsection}{\numberline {3.6.1}Experiment Environment}{39}{subsection.3.6.1}
+\contentsline {subsection}{\numberline {3.6.2}Experiment Data}{40}{subsection.3.6.2}
+\contentsline {subsection}{\numberline {3.6.3}Experiment Results}{40}{subsection.3.6.3}

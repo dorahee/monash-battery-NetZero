@@ -1,0 +1,139 @@
+\documentclass[a4paper]{report}
+\let\proof\relax
+\let\endproof\relax
+\usepackage{amsmath,amsfonts,amssymb,amsthm,epsfig,epstopdf,url,array}
+\usepackage{graphicx}
+\usepackage{listings}
+\usepackage{tabularx}
+\usepackage{algorithm}
+\usepackage[noend]{algpseudocode}
+\usepackage{booktabs}
+\usepackage{lscape}
+\usepackage[hidelinks,colorlinks=purple,linkcolor=purple,bookmarksopen=true]{hyperref}
+\usepackage[openlevel=1]{bookmark}
+\usepackage[acronym, nonumberlist]{glossaries}
+\usepackage{verbatim} 
+\ifx\pdftexversion\undefined
+\usepackage[dvips,usenames]{color}
+\else
+\usepackage[pdftex,usenames,dvipsnames]{color}
+\fi
+\newcolumntype{Y}{>{\centering\arraybackslash}X}
+\newcolumntype{R}{>{\raggedleft\arraybackslash}X}
+\newcolumntype{L}{>{\raggedright\arraybackslash}X}
+\usepackage{setspace}
+%\onehalfspacing
+\doublespacing
+%hidelinks,colorlinks=false,
+%\usepackage[unicode=true, hidelinks=true, bookmarksopen=true]{hyperref}
+%\PassOptionsToPackage{usenames,dvipsnames}{color} % color is loaded by hyperref
+
+\input{minizinc.tex}
+
+%\lstset{%
+%	basicstyle=\small\ttfamily,
+%	language=Python,
+%	breaklines=true,
+%	keywordstyle=\bfseries\color{green!40!black},
+%	commentstyle=\itshape\color{purple!40!black},
+%	identifierstyle=\color{black},
+%	backgroundcolor=\color{gray!10!white},
+%	numbers=left, numberstyle=\tiny, stepnumber=2, numbersep=5pt,
+%}
+
+\makeglossaries
+\loadglsentries{glossary}
+
+%opening
+\title{Battery Scheduling Algorithms for Peak Demand Management and Demand Response}
+\author{
+	\\
+	[10cm]
+	Shan Dora He \\ 
+	dora.he3@monash.edu \\
+}
+
+\begin{document}
+\onehalfspacing
+\maketitle
+
+%\newpage
+%\begin{abstract}
+%
+%\end{abstract}
+\include{summary}
+
+\newpage	
+\printglossary[title={List of Acronyms}, type=acronym]
+\printglossary[title={List of Symbols}]
+
+%\newpage
+\tableofcontents
+%\newpage
+\include{introduction}
+\include{pdm}
+\include{dr}
+%\include{conclusion}
+
+
+\newpage
+\bibliographystyle{ieeetr}
+\bibliography{references}
+
+\end{document}
+
+
+%\begin{equation}
+	%	\alpha = 
+	%	\begin{cases}
+		%		1,				& \text{if the current time is between 7am to 7pm} \\
+		%		0,              & \text{otherwise}
+		%	\end{cases}
+	%\end{equation}
+
+%	\item end of day energy level penalty that matches the energy level at the end of the day to the maximum capacity as much as possible:
+%	
+%	\begin{equation}
+	%		\gls{eod} = \sum_{b} ( \gls{max_cap} - \glssymbol{soc_n} \text{}_{\gls{n^eod}})
+	%	\end{equation}
+
+%In the model German is looking at, I define the charges are the rates after the efficiency is applied but discharges are the rates before the efficiency is applied. It is not common to model like this in the literature. 
+%- Optimal Residential Battery Scheduling...: https://ieeexplore.ieee.org/document/9248889
+%- Optimizing the operation of energy storage using a non-linear lithium-ion battery degradation model: https://www.sciencedirect.com/science/article/pii/S0306261919320471
+%
+%Some people model charges and discharges to be the rates before the efficiency is applied. 
+%- Smart charging and appliance scheduling approaches to demand side management: https://www.sciencedirect.com/science/article/abs/pii/S0142061513005206
+%
+%Some others model the charges to be rates before the efficiency but discharges as the rates after the efficiency. 
+%- Optimal Battery Storage Participation...: https://www.mdpi.com/1996-1073/13/24/6629
+%- Detailed Li-ion battery characterization model for economic operation: https://www.researchgate.net/publication/336716773_Detailed_Li-ion_battery_characterization_model_for_economic_operation 
+
+%The main solution for solving the \gls{PDMP} include a \gls{LP} model and the rolling horizon control. The rolling horizon control is illustrated by Figure~\ref{fig:rolling-horizon} --- the load forecast is refreshed regularly during the day, for example, every 15 minutes or half an hour. Whenever the load forecast is refreshed, the battery scheduling problem is solved again using the updated forecast data, and the charge and discharge decisions from the new schedule will be implemented in practise until the load forecast is refreshed again. 
+%
+%%
+%Let us write \gls{annual_peak} as the demand threshold for the annual peak demand charge and \gls{summer_peak} as the demand threshold for each month from November to March. The rolling horizon process can be described as follows:
+%
+%\begin{enumerate}
+%	\item set the demand thresholds for both charges $\gls{annual_peak} = zero$ and $\gls{summer_peak} = 0$.
+%	
+%	\item whenever the load forecast is refreshed: 
+%	\label{step:forecast_schedule}
+%	
+%	\begin{enumerate}
+%		\item check if the forecast maximum demand exceeds the current minimum demand threshold:
+%		
+%		\item if yes:
+%		\begin{enumerate}
+%			\item solve the battery scheduling problem,
+%			
+%			\item implement the charge and discharge decisions in practise until the load forecast is updated again,
+%			
+%			\item update the demand thresholds based on the actual demand and the implemented battery schedule.
+%		\end{enumerate}
+%		
+%		\item if no, do nothing and wait until the load forecast is updated again. 
+%	\end{enumerate}
+%	
+%	\item repeat Step~\ref{step:forecast_schedule}. 
+%	
+%\end{enumerate}

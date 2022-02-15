@@ -1,0 +1,400 @@
+ \makeglossaries
+  \newacronym{AEMO}{AEMO}{Australia Electricity Market Operator}
+  
+ \newacronym{LP}{LP}{linear programming}
+
+  \newacronym{RHRS}{RHRS}{rolling horizon rescheduling strategy}
+ 
+  \newacronym{SOC}{SOC}{state-of-charge}
+  
+  \newacronym{PDM}{PDM}{peak demand management}
+  
+  \newacronym{DR}{DR}{demand response}
+  
+  \newacronym{LRV}{LRV}{load reduction value}
+  
+   \newacronym{NPDC}{NPDC}{network peak demand charge}
+   
+   \newacronym{VFB}{VFB}{Vanadium Flow battery}
+   
+   \newacronym{Liionb}{Li-ionB}{Lithium-ion battery}
+    
+    \newacronym[plural=batteries, firstplural=battery energy storage systems (batteries)]{battery}{battery}{battery energy storage system}
+  
+   \newglossaryentry{T}{
+  	name={\ensuremath{T}},
+  	description={total minutes per time step}, 
+  	sort={time}
+  }
+ 
+
+ \newglossaryentry{N^day}{
+ 	name={\ensuremath{N^{day}}},
+ 	description={the total number of time steps per day}, 
+ 	sort={time}
+ }
+
+ \newglossaryentry{N^hour}{
+	name={\ensuremath{N^{hour}}},
+	description={the total number of time steps per hour}, 
+	sort={time}
+}
+ 
+ \newglossaryentry{n}{
+ 	name={\ensuremath{n}},
+ 	description={the index of a time step}, 
+ 	sort={time}
+ }
+
+ \newglossaryentry{n^eod}{
+	name={\ensuremath{n^{eod}}},
+	description={the index of the end day time step}, 
+	sort={time}
+}
+
+ \newglossaryentry{N^battery}{
+	name={\ensuremath{B^{bat}}},
+	description={the total number of batteries}, 
+	sort={battery}
+}
+
+\newglossaryentry{max_power}{
+	name={\ensuremath{
+			\bar{p}_i
+		}},
+	description={the maximum battery power rate}, 
+	sort={battery}
+}
+
+\newglossaryentry{init_energy}{
+	name={\ensuremath{
+			e^{init}_i
+	}},
+	description={the initial battery energy level}, 
+	sort={battery}
+}
+
+\newglossaryentry{max_cap}{
+	name={\ensuremath{
+			e^{max}_i
+	}},
+	description={the maximum battery capacity}, 
+	sort={battery}
+}
+
+\newglossaryentry{min_cap}{
+	name={\ensuremath{
+			e^{min}_i
+	}},
+	description={the minimum battery capacity}, 
+	sort={battery}
+}
+
+\newglossaryentry{soc_n}{
+name={\ensuremath{
+		soc_{i,n}
+}},
+symbol={\ensuremath{
+		soc_{i,}
+}},
+description={the state of charge at time step $n$}, 
+sort={battery}
+}
+
+\newglossaryentry{ch_bn}{
+	name={\ensuremath{
+			b^{+}_{i,n}
+	}},
+	symbol={\ensuremath{
+		b^{+}_{i,}
+	}},
+	description={the amount of power charged to the battery at time step $n$}, 
+	sort={battery}
+}
+
+\newglossaryentry{disch_bn}{
+	name={\ensuremath{
+			b^{-}_{i,n}
+	}},						
+	symbol={\ensuremath{
+		b^{-}_{i,}
+	}},
+	description={the amount of power discharged from the battery at time step $n$}, 
+	sort={battery}
+}
+
+\newglossaryentry{rte}{
+	name={\ensuremath{
+			\eta_b
+	}},
+	description={the battery round-trip efficiency}, 
+	sort={battery}
+}
+
+\newglossaryentry{annual_charge}{
+	name={\ensuremath{
+			p^{ann}
+	}},
+	description={the annual maximum demand tariff}, 
+	sort={tariff}
+}
+
+\newglossaryentry{annual_charge_times}{
+	name={\ensuremath{
+			\textbf{t}^{ann}
+	}},
+	symbol={\ensuremath{
+			t^{ann}_n
+	}},
+	description={binary indicators of hours that the annual maximum demand tariff is applied to}, 
+	sort={tariff}
+}
+
+
+\newglossaryentry{summer_charge}{
+	name={\ensuremath{
+			p^{summ}
+	}},
+	description={the summer monthly maximum demand tariff}, 
+	sort={tariff}
+}
+
+
+\newglossaryentry{summer_charge_times}{
+	name={\ensuremath{
+			\textbf{t}^{summ}
+	}},
+	symbol={\ensuremath{
+			t^{summ}_n
+	}},
+	description={binary indicators of hours that the summer monthly maximum demand tariff is applied to}, 
+	sort={tariff}
+}
+
+\newglossaryentry{trigger_price}{
+	name={\ensuremath{
+			p^{trigger}
+	}},
+	description={the trigger price for demand response}, 
+	sort={tariff}
+}
+
+\newglossaryentry{t_dr}{
+	name={\ensuremath{
+			\textbf{t}^{dr}
+	}},
+	symbol={\ensuremath{
+			t^{dr}_n
+	}},
+	description={binary indications of time intervals whose forecast wholesale spot prices are above the trigger price}, 
+	sort={tariff}
+}
+
+
+\newglossaryentry{w_charge}{
+	name={\ensuremath{
+			w^{cost}
+	}},
+	description={the objective weight of the peak demand charge}, 
+	sort={obj}
+}
+
+\newglossaryentry{alpha_uplift}{
+	name={\ensuremath{
+			\alpha^{uplift}
+	}},
+	description={the uplift fator associated with the maximum temperature}, 
+	sort={obj}
+}
+
+\newglossaryentry{w_reward}{
+	name={\ensuremath{
+			w^{reward}
+	}},
+	description={the objective weight of the demand response reward}, 
+	sort={obj}
+}
+
+\newglossaryentry{w_penalty}{
+	name={\ensuremath{
+			w^{penalty}
+	}},
+	description={the objective weight of the penalty costy of charge/discharge batteries frequently}, 
+	sort={obj}
+}
+
+\newglossaryentry{w_eod}{
+	name={\ensuremath{
+			w^{eod}
+	}},
+	description={the objective weight of the penalty cost of not fully charging the battery before the end of the day}, 
+	sort={obj}
+}
+
+\newglossaryentry{f_charge}{
+	name={\ensuremath{
+			f^{cost}
+	}},
+	description={the total peak demand charge}, 
+	sort={obj}
+}
+
+\newglossaryentry{g_battery}{
+name={\ensuremath{
+		g^{penalty}
+}},
+description={the penalty cost of charging/discharging batteries frequently}, 
+sort={obj}
+}
+
+\newglossaryentry{g_eod}{
+	name={\ensuremath{
+			g^{eod}
+	}},
+	description={the penalty cost of not fully charge the battery before the end of the day}, 
+	sort={obj}
+}
+
+\newglossaryentry{h_combined}{
+	name={\ensuremath{
+			h^{combined}
+	}},
+	description={the combined objective}, 
+	sort={obj}
+}
+
+\newglossaryentry{reward_n}{
+	name={\ensuremath{
+			r_n
+	}},
+	description={the financial reward or benefit for the trading interval $n$}, 
+	sort={obj}
+}
+
+\newglossaryentry{spot_price_n}{
+	name={\ensuremath{
+			p^{spot}_n
+	}},
+	description={the wholesale spot price for the trading interval $n$ in \$ / MWh}, 
+	sort={tariff}
+}
+
+\newglossaryentry{forecast_price_n}{
+	name={\ensuremath{
+			p^{fore}_n
+	}},
+	description={the forecasted spot price for the trading interval $n$ in \$ / kWh}, 
+	sort={tariff}
+}
+
+\newglossaryentry{historic_price_n}{
+	name={\ensuremath{
+			p^{his}_{d, n}
+	}},
+	description={the historic spot price for the trading interval $n$ in \$ / kWh of day $d$ }, 
+	sort={tariff}
+}
+
+\newglossaryentry{load}{
+	name={\ensuremath{
+			l^{fore}_n
+	}},
+	description={the forecast load at time step $n$ in MWh}, 
+	sort={demand}
+}
+
+\newglossaryentry{load''}{
+	name={\ensuremath{
+			l^{mod}_n
+	}},
+	description={the modified load at time step $n$ in MWh}, 
+	sort={demand}
+}
+
+\newglossaryentry{baseline_load_n}{
+	name={\ensuremath{
+			l^{bl}_n
+	}},
+	description={the baseline load for the trading interval $n$ in MWh}, 
+	sort={load}
+}
+
+\newglossaryentry{actual_load_n}{
+	name={\ensuremath{
+			l^{actual}_n
+	}},
+	description={the actual or measured load for the trading interval $n$ in MWh}, 
+	sort={load}
+}
+
+\newglossaryentry{historic_load_n}{
+	name={\ensuremath{
+			l^{his}_{d, n}
+	}},
+	description={the historical load for the trading interval $n$ in MWh of day $d$ }, 
+	sort={load}
+}
+
+\newglossaryentry{demand}{
+	name={\ensuremath{
+			d^{fore}_n
+	}},
+	description={the forecast demand at time step $n$ in kW}, 
+	sort={demand}
+}
+
+\newglossaryentry{demand'}{
+	name={\ensuremath{
+			d^{mod}_n
+	}},
+	description={the modified demand at time step $n$ in kW}, 
+	sort={demand}
+}
+
+\newglossaryentry{historic_demand_n}{
+	name={\ensuremath{
+			d^{his}_n
+	}},
+	description={the historical demand at time step $n$ in kW}, 
+	sort={demand}
+}
+
+\newglossaryentry{annual_peak}{
+	name={\ensuremath{
+			\bar{d}^{ann}
+	}},
+	description={the maximum demand in the hours of the annual peak demand tariff}, 
+	sort={demand}
+}
+
+\newglossaryentry{annual_peak_previous}{
+	name={\ensuremath{
+			\hat{d}^{ann}
+	}},
+	description={the pre-defined maximum demand threshold in the hours of the annual peak demand tariff}, 
+	sort={demand}
+}
+
+\newglossaryentry{summer_peak}{
+	name={\ensuremath{
+			\bar{d}^{summ}
+	}},
+	description={the maximum demand in the hours of the summer monthly peak demand tariff}, 
+	sort={demand}
+}
+
+\newglossaryentry{summer_peak_previous}{
+	name={\ensuremath{
+			\hat{d}^{summ}
+	}},
+	description={the pre-defined maximum demand threshold in the hours of the summer monthly peak demand tariff}, 
+	sort={demand}
+}
+
+%\newglossaryentry{LRV}{
+%	name={\ensuremath{
+%		LRV
+%	}},
+%	description={the load reduction value}, 
+%	sort={tariff}
+%}

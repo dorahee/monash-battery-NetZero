@@ -1,0 +1,1 @@
+"{\"Li-on\": {\"init_soc\": 54.64, \"min_soc\": 0, \"max_soc\": 134, \"max_power\": 120, \"efficiency\": 0.88}, \"VFB\": {\"init_soc\": 810.0, \"min_soc\": 0, \"max_soc\": 900, \"max_power\": 180, \"efficiency\": 0.65}}"

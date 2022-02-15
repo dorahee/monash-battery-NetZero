@@ -1,0 +1,78 @@
+\begin{thebibliography}{10}
+
+\bibitem{Marzband2017}
+M.~Marzband, H.~Alavi, S.~S. Ghazimirsaeid, H.~Uppal, and T.~Fernando,
+  ``Optimal energy management system based on stochastic approach for a home
+  microgrid with integrated responsive load demand and energy storage,'' {\em
+  Sustainable Cities and Society}, vol.~28, pp.~256 -- 264, 2017.
+
+\bibitem{Karimi2019}
+A.~Karimi, F.~Aminifar, A.~Fereidunian, and H.~Lesani, ``Energy storage
+  allocation in wind integrated distribution networks: An milp-based
+  approach,'' {\em Renewable Energy}, vol.~134, pp.~1042 -- 1055, 2019.
+
+\bibitem{Li2019a}
+Y.~{Li}, Z.~{Yang}, G.~{Li}, D.~{Zhao}, and W.~{Tian}, ``Optimal scheduling of
+  an isolated microgrid with battery storage considering load and renewable
+  generation uncertainties,'' {\em IEEE Transactions on Industrial
+  Electronics}, vol.~66, pp.~1565--1575, Feb 2019.
+
+\bibitem{Couraud2020}
+B.~{Couraud}, S.~{Norbu}, M.~{Andoni}, V.~{Robu}, H.~{Gharavi}, and D.~{Flynn},
+  ``Optimal residential battery scheduling with asset lifespan consideration,''
+  in {\em 2020 IEEE PES Innovative Smart Grid Technologies Europe
+  (ISGT-Europe)}, pp.~630--634, Oct 2020.
+
+\bibitem{Cuisinier2021}
+E.~Cuisinier, A.~RUBY, C.~BOURASSEAU, P.~Lemaire, and B.~Penz, ``{Rolling
+  horizon optimization: new approaches to balance short-term and long-term
+  decisions for energy planning},'' in {\em {ROADEF 2021 - 22{\`e}me
+  congr{\`e}s de la soci{\'e}t{\'e} Fran{\c c}aise de Recherche
+  Op{\'e}rationnelle et d'Aide {\`a} la D{\'e}cision}}, (Mulhouse, France),
+  Apr. 2021.
+
+\bibitem{Marietta2014}
+M.~P. Marietta, M.~Graells, and J.~M. Guerrero, ``A rolling horizon
+  rescheduling strategy for flexible energy in a microgrid,'' in {\em 2014 IEEE
+  International Energy Conference (ENERGYCON)}, pp.~1297--1303, May 2014.
+
+\bibitem{Silvente2015}
+J.~Silvente, G.~M. Kopanos, E.~N. Pistikopoulos, and A.~Espuña, ``A rolling
+  horizon optimization framework for the simultaneous energy supply and demand
+  planning in microgrids,'' {\em Applied Energy}, vol.~155, pp.~485--501, 2015.
+
+\bibitem{AEMO2020a}
+AEMO, ``Electricity demand forecasting methodology information paper,'' tech.
+  rep., Australian Energy Market Operator Limited, Aug. 2020.
+
+\bibitem{Baratsas2021}
+S.~G. Baratsas, A.~M. Niziolek, O.~Onel, L.~R. Matthews, C.~A. Floudas, D.~R.
+  Hallermann, S.~M. Sorescu, and E.~N. Pistikopoulos, ``A framework to predict
+  the price of energy for the end-users with applications to monetary and
+  energy policies,'' {\em Nature communications}, vol.~12, pp.~18--18, 01 2021.
+
+\bibitem{Maheshwari2020}
+A.~Maheshwari, N.~G. Paterakis, M.~Santarelli, and M.~Gibescu, ``Optimizing the
+  operation of energy storage using a non-linear lithium-ion battery
+  degradation model,'' {\em Applied Energy}, vol.~261, p.~114360, 2020.
+
+\bibitem{Adika2014}
+C.~O. Adika and L.~Wang, ``Smart charging and appliance scheduling approaches
+  to demand side management,'' {\em International Journal of Electrical Power
+  \& Energy Systems}, vol.~57, pp.~232 -- 240, 2014.
+
+\bibitem{Pandzic2019}
+H.~{Pandžić} and V.~{Bobanac}, ``An accurate charging model of battery energy
+  storage,'' {\em IEEE Transactions on Power Systems}, vol.~34, pp.~1416--1426,
+  March 2019.
+
+\bibitem{GonzalezCastellanos2020}
+A.~Gonzalez-Castellanos, D.~Pozo, and A.~Bischi, ``Detailed li-ion battery
+  characterization model for economic operation,'' {\em International Journal
+  of Electrical Power \& Energy Systems}, vol.~116, p.~105561, 2020.
+
+\bibitem{Stuckey2018}
+P.~J. Stuckey, K.~Marriott, and G.~Tack, {\em The MiniZinc Handbook 2.2.3}.
+\newblock Monash University and Data61 CSIRO, Oct. 2018.
+
+\end{thebibliography}

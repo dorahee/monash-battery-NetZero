@@ -1,0 +1,28 @@
+\section*{Executive Summary}
+
+Large electricity consumers pay a \textit{\acrlong{NPDC}} based on their maximum demands in addition to their actual electrical consumption per day. 
+They can also participate in \textit{\acrlong{DR}} to receive financial rewards by reducing consumption at times with high electricity wholesale prices.
+One way to reduce \acrlong{NPDC}s and earn rewards without changing existing consumption patterns is to use batteries. We can charge batteries during times with low demands or prices and discharge them at times with high demands or prices. 
+
+This work develops a scheduling algorithm that decides the best times to charge and discharge batteries, in order to minimise the charges and maximise the rewards. This algorithm combines \acrlong{LP} and a \acrlong{RHRS} to schedule batteries based on price and demand forecasts and incorporate uncertainty in these forecasts. The results show that we can reduce the annual \acrlong{NPDC} of Monash Clayton campus by 2\% at most and the monthly \acrlong{NPDC} by 13\% at most for 2020 using the existing \acrlong{VFB} and \acrlong{Liionb}. The results for demand response are still under investigation. 
+
+In order to hedge against the risks of uncertain future and inaccurate forecasts, future work can consider employing additional methods to incorporate various future scenarios, and scheduling batteries based on the expected outcomes of those future scenarios instead of a single forecast. Other future work can include investigating the scheduling results using different sizes of batteries, and evaluating the economic costs and returns of those battery sizes. 
+
+%minimise the peak demand and therefore the \acrlong{NPDC} by fully charging batteries before the peak times and fully discharging at peak times. To achieve this goal, this work develops a method that combines \acrlong{LP} and \acrlong{RHRS} to automatically schedule batteries. The results show that by using the existing \acrlong{VFB} and \acrlong{Liionb}, we can reduce the annual \acrlong{NPDC} of Monash Clayton campus by 2\% at most and the monthly \acrlong{NPDC} by 13\% at most for 2020. 
+
+%- peak demand management, demand response
+%
+%- use batteries, charge, discharge
+%
+%- computer algorithms, maximise, minimise
+%
+%- optimisation. 
+%
+%- rolling horizon rescheduling strategy
+%
+%- implementation, in minizinc, in python, 
+%
+%- findings... (don't have yet)
+
+%
+%Two batteries are available for minimising the annual peak demand and the summer peak demand and therefore the peak demand charges of the Monash Clayton campus. Each battery is modelled by an initial energy level at the beginning of the scheduling horizon, the minimum and maximum allowed energy capacities, the maximum power rate, the amount of power charged to or discharged from the battery per time step, the efficiency and the amount of energy remaining in the battery per time step. A scheduling horizon can be a day or shorter. Each battery can charge or discharge at each time below the maximum power rate, and store energy below the maximum capacity and above the minimum capacity. The energy remaining in the battery at each time step depends on the energy left at the previous time step as well as the charge and discharge. The battery must have energy left at a minimum level at the beginning of the scheduling horizon and recharge back up to that minimum level before the end of the horizon. The objective is to minimise the peak demand charges and the battery health cost (which is designed to avoid frequent charging and discharging). When the load forecast is given, a \gls{lp} model can be used for solving the \gls{PDMP} and finding the best time to charge and discharge the battery during the scheduling horizon. A rolling horizon control can be also used to repeatedly solve the \gls{PDMP} during the day whenever the load forecast is updated, in order to incorporate any changes in real time. 

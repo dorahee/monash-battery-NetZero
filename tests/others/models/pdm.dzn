@@ -1,0 +1,11 @@
+num_intervals = 19;
+num_intervals_hour = 4;
+num_batteries = 2;
+init_energy_levels = [134, 900];
+min_energy_capacities = [0, 0];
+max_energy_capacities = [134, 900];
+max_powers = [120, 180];
+efficiencies = [0.88, 0.65];
+max_demand_charge = 131700.0;
+current_demand_threshold = 0;
+load_forecast = [2176.0, 2132.2, 2033.2, 2028.8, 9.7, 0.0, 20.2, 0.0, 923.3, 1413.5, 1401.7, 1409.7, 1428.0, 1369.0, 1356.5, 1355.7, 1416.8, 1356.5, 1409.7];

@@ -1,0 +1,46 @@
+\chapter{Introduction}
+\label{chp:introduction}
+
+
+\section{Project Goals}
+
+Large electricity consumers, such as a customer, a company or a premier with 400 MWh electrical consumption per year, pay a \textit{\gls{NPDC}} in addition to their actual electrical consumption per day. These consumers also can receive financial rewards for reducing loads when the wholesale price is above a threshold via contracts with the retailer. 
+
+The goal of this project is to reduce the \gls{NPDC} and increase rewards by modifying existing demands using \glspl{battery}. 
+To achieve this goal, this project develops computer algorithms that:
+\begin{itemize}
+	\item automatically calculate the best times to charge or discharge \glspl{battery} based on price and demand forecasts,
+	
+	\item minimises the peak demand charges,
+	
+	\item maximises the financial rewards. 
+\end{itemize}
+
+This report presents the development of models and algorithms for \gls{PDM} and wholesale market \gls{DR} as part of the Smart Energy City project of Monash University on the Clayton campus. 
+
+
+ \section{Methodology of Battery Scheduling}
+ \label{intro:methodology}
+
+Optimisation is a field that studies methods for finding best decisions for problems that minimise or maximise objectives of these problem. Constraints are applied to decisions, so that a finite number of options are available for each decision.  In the context of battery scheduling, optimisation can refer to a method that decides the best amount of energy to be charged or discharged at each time interval of the day, in order to minimise costs and maximum profits. The amount of energy to be charged or discharged is restricted by the capacity and power rate of the \gls{battery}, and the demand of the consumer. 
+
+\textit{\Gls{LP}} is a type of optimisation methods that have been widely used for solving battery scheduling problems in the literature~\cite{Marzband2017, Karimi2019, Li2019a, Couraud2020, Cuisinier2021}. 
+However, it is insufficient to simply apply optimisation methods to schedule \glspl{battery} once per day based on forecasts, because of the presence of uncertainty in future demand~\cite{Marietta2014, Silvente2015, AEMO2020a}. One way to incorporate uncertainty is to use a \textit{\gls{RHRS}}, which is sometimes also known as \textit{rolling horizon control strategy} or \textit{rolling horizon predictive strategy} in the literature~\cite{Marietta2014, Silvente2015, Cuisinier2021, Baratsas2021}. 
+
+Typically, a \gls{RHRS} involves forecasting demand and prices, and rescheduling batteries iteratively during a day. At each iteration, the future demands and prices are re-forecasted using updated information, and battery schedules are re-computed given the new forecasts. The battery schedule from the last iteration will be discarded and the new battery schedule will be implemented until the next iteration where new demand forecasts and battery schedules are calculated again. More details of this \gls{RHRS} are explained in~\cite{Marietta2014} and Section~\ref{pdm:method}.
+
+This work combines \gls{LP} methods and the \gls{RHRS} to schedule batteries in the context of the Monash smart city project, in order to minimise the \gls{NPDC} and maximum rewards from \gls{DR}. This document presents the formulation of the battery scheduling problems, the development of solving methods and the evaluation of these methods for both peak demand management and \gls{DR}. 
+
+The detailed implementation of this work is available on BitBucket \url{https://bitbucket.org/dorahee2/battery-scheduling/src/master/}. At the current stage of the project, this repository needs to remain private. Please email \texttt{dora.he3@monash.edu} for access to this repository.
+
+\section{Report Structure}
+
+This report is structured in the following way:
+
+\begin{itemize}
+	\item Chapter~\ref{chp:pdm} presents the model and development of the battery scheduling method for peak demand management. 
+	
+	\item Chapter~\ref{chp:dr} presents the model and development of the battery scheduling method for demand response. 
+	
+%	\item Chapter~\ref{chp:conclusion}
+\end{itemize}
